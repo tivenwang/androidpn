@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2012-10-19 9:29:19 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.androidpn.server.model.TtUser" table="TT_USER" schema="FI">
+        <comment>???</comment>
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="sequence">   
+                <param name="sequence">TT_USERid</param>   
+            </generator>
+        </id>
+        <property name="username" type="string">
+            <column name="USERNAME" length="20" not-null="true" unique="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="pwd" type="string">
+            <column name="PWD" length="16">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="imeicode" type="string">
+            <column name="IMEICODE" length="15" not-null="true">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="simcode" type="string">
+            <column name="SIMCODE" length="20">
+                <comment>sim??</comment>
+            </column>
+        </property>
+        <property name="realname" type="string">
+            <column name="REALNAME" length="200">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="point" type="long">
+            <column name="POINT" precision="10" scale="0" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="pointall" type="long">
+            <column name="POINTALL" precision="10" scale="0" not-null="true">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="virtualmoney" type="double">
+            <column name="VIRTUALMONEY"  not-null="true">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="usertype" type="big_decimal">
+            <column name="USERTYPE" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="userlevel" type="big_decimal">
+            <column name="USERLEVEL" precision="22" scale="0">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="lastlogintime" type="timestamp">
+            <column name="LASTLOGINTIME" length="7" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="signtime" type="timestamp">
+            <column name="SIGNTIME" length="7" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="loginstatus" type="big_decimal">
+            <column name="LOGINSTATUS" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="status" type="big_decimal">
+            <column name="STATUS" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="devicetokenapple" type="string">
+            <column name="DEVICETOKENAPPLE" length="128">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="spare1" type="string">
+            <column name="SPARE1" length="100">
+                <comment>????1</comment>
+            </column>
+        </property>
+        <property name="spare2" type="string">
+            <column name="SPARE2" length="100">
+                <comment>????2</comment>
+            </column>
+        </property>
+        <property name="agentid" type="big_decimal">
+            <column name="AGENTID" precision="22" scale="0">
+                <comment>????</comment>
+            </column>
+        </property>   
+        <property name="phonenumber" type="string">
+            <column name="PHONENUMBER" length="20">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="50">
+                <comment>????</comment>
+            </column>
+        </property>     
+        <property name="devicetokenandroid" type="string">
+            <column name="DEVICETOKENANDROID" length="128">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="lastloginos" type="big_decimal">
+            <column name="LASTLOGINOS" precision="2" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="wantmessageandroid" type="big_decimal">
+            <column name="WANTMESSAGEANDROID" precision="1" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="wantmessageios" type="big_decimal">
+            <column name="WANTMESSAGEIOS" precision="1" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
